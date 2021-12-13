@@ -6,6 +6,9 @@ public class CarTest extends CarCatalog{
 
     public static void main(String[] args) {
 
+        Car car1 = new Car();
+        Car car2 = new Car();
+
 
         CarCatalog carCatalogue = new CarCatalog();
         Car carCatalogAbstract = new Car();
@@ -15,7 +18,7 @@ public class CarTest extends CarCatalog{
 //        //carSearch.printCarList();
 //
         List<Car> result = carSearch.searchByCategory(carSearch.carArrayList);
-        List<Car> result2 = carSearch.searchByManufacturer(result, carSearch.scanner);
+        List<Car> result2 = carSearch.searchByManufacturer(result);
         List<Car> result3 = carSearch.searchByModel(result2);
         List<Car> result4 = carSearch.searchByEngine(result3);
         List<Car> result5 = carSearch.searchByPrice(result4);

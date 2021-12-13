@@ -25,12 +25,12 @@ public class CarSearchMethods extends CarCatalog {
         return resultByCat;
     }
 
-    public List<Car> searchByManufacturer(List<Car> resultCat, Scanner model) {
+    public List<Car> searchByManufacturer(List<Car> resultCat) {
 
 
         this.resultCat = resultCat;
 
-        System.out.println("Enter Manufacturer: " + model.next());
+        System.out.println("Enter Manufacturer: ");
         String manufacturer = scanner.next().toUpperCase();
         resultByMan = resultCat.stream()
                 .filter(line -> line.getManufacture().contains(manufacturer))
