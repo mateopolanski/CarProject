@@ -1,17 +1,16 @@
 public class Car {
 
-    private static String category;
+    private String category;
     private String manufacturer;
     private String model;
     private double engine;
     private int price;
-    public String color;
-    protected String year;
-    String wheels;
 
-    public Car(){}
 
-    public Car (String category, String manufacturer, String model, double engine, int price){
+    public Car() {
+    }
+
+    public Car(String category, String manufacturer, String model, double engine, int price) {
         this.category = category;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -70,5 +69,9 @@ public class Car {
                 '}';
 
         //overloading
+    }
+
+    public void warning() {
+        System.out.println("Warning");
     }
 }
