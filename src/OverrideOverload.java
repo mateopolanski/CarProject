@@ -1,18 +1,18 @@
-public class OverrideOverload extends CarCatalog {
+public class OverrideOverload extends Car {
 
 
-    @Override
-    public void warning() {
-        System.out.println(" Warning Overriding");
-    }
+//    @Override
+//    public void warning() {
+//        System.out.println(" Warning Overriding");
+//    }
 
     public void warning(String s) {
         System.out.println(" Warning: Overloading " + s);
     }
 
-//    public void warning(){
-//        System.out.println("Warningbb");
-//    }
+    public void warning(){
+        System.out.println("Warningbb");
+    }
 
 
     public void warning(int a, String b) {

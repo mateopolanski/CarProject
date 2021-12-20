@@ -1,11 +1,10 @@
-public class Car {
+public abstract class Car {
 
-    private String category;
-    private String manufacturer;
-    private String model;
-    private double engine;
-    private int price;
-
+    protected String category;
+    protected String manufacturer;
+    protected String model;
+    protected double engine;
+    protected int price;
 
     public Car() {
     }
@@ -71,7 +70,4 @@ public class Car {
         //overloading
     }
 
-    public void warning() {
-        System.out.println("Warning");
-    }
 }

@@ -4,31 +4,36 @@ import java.util.stream.Collectors;
 
 public class CarSearchMethods extends CarCatalog {
 
+    public List<CarCatalog> list = initCarCatalog();
+    UserCommunication communication = new UserCommunication();
+
     Scanner scanner = new Scanner(System.in);
-    List<Car> resultCat, resultByMan, resultByMod, resultByEng, resultByPrice;
-    String message = "does not exist on the list";
+    List<CarCatalog> resultByCat, resultByMan, resultByMod, resultByEng, resultByPrice;
 
-    public List<Car> searchByCategory(List<Car> carArrayList) {
 
-        this.carArrayList = carArrayList;
+
+
+    public List<CarCatalog> searchByCategory(List<CarCatalog> carArrayList) {
+
+        this.list = carArrayList;
 
         System.out.println("Enter Category: ");
         String category = scanner.next().toUpperCase();
-        //
-        List<Car> resultByCat = carArrayList.stream()
-                .filter(line -> line.getCategory().contains(category))     //
+
+        List<CarCatalog> resultByCat = list.stream()
+                .filter(line -> line.getCategory().contains(category))
                 .collect(Collectors.toList());
         if (resultByCat.isEmpty()) {
-            System.out.println("Category " + message);
+            communication.searchNotExist("Category");
             System.exit(1);
         } else resultByCat.forEach(System.out::println);
         return resultByCat;
     }
 
-    public List<Car> searchByManufacturer(List<Car> resultCat) {
+    public List<CarCatalog> searchByManufacturer(List<CarCatalog> resultCat) {
 
 
-        this.resultCat = resultCat;
+        this.resultByCat = resultCat;
 
         System.out.println("Enter Manufacturer: ");
         String manufacturer = scanner.next().toUpperCase();
@@ -37,7 +42,7 @@ public class CarSearchMethods extends CarCatalog {
                 .collect(Collectors.toList());
 
         if (resultByMan.isEmpty()) {
-            System.out.println("Manufacturer " + message);
+            communication.searchNotExist("Manufacturer");
             System.exit(1);
         } else resultByMan.forEach(System.out::println);
 
@@ -45,7 +50,7 @@ public class CarSearchMethods extends CarCatalog {
     }
 
 
-    public List<Car> searchByModel(List<Car> resultByMan) {
+    public List<CarCatalog> searchByModel(List<CarCatalog> resultByMan) {
 
         this.resultByMan = resultByMan;
 
@@ -56,13 +61,13 @@ public class CarSearchMethods extends CarCatalog {
                 .collect(Collectors.toList());
 
         if (resultByMod.isEmpty()) {
-            System.out.println("Model " + message);
+            communication.searchNotExist("Model");
             System.exit(1);
         } else resultByMod.forEach(System.out::println);
         return resultByMod;
     }
 
-    public List<Car> searchByEngine(List<Car> resultByMod) {
+    public List<CarCatalog> searchByEngine(List<CarCatalog> resultByMod) {
 
         this.resultByMod = resultByMod;
 
@@ -73,13 +78,13 @@ public class CarSearchMethods extends CarCatalog {
                 .collect(Collectors.toList());
 
         if (resultByEng.isEmpty()) {
-            System.out.println("Engine " + message);
+            communication.searchNotExist("Engine");
             System.exit(1);
         } else resultByEng.forEach(System.out::println);
         return resultByEng;
     }
 
-    public List<Car> searchByPrice(List<Car> resultByEng) {
+    public List<CarCatalog> searchByPrice(List<CarCatalog> resultByEng) {
 
         this.resultByEng = resultByEng;
 

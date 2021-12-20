@@ -2,30 +2,48 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class CarCatalog extends Car {
+    // public List<CarCatalog> list = initCarCatalog();
 
+    public CarCatalog(String category, String manufacturer, String model, double engine, int price) {
+        super(category, manufacturer, model, engine, price);
+    }
+
+    public CarCatalog() {
+    }
 
     //osobna metoda do objektow
-    Car toyotaCamry = new Car("SUV", "TOYOTA", "CAMRY", 3.0, 1200);
-    Car volvoXC90 = new Car("SUV", "VOLVO", "XC90", 2.0, 15000);
-    Car mercedesGLC = new Car("COUPE", "MERCEDES", "GLC60", 3.0, 17000);
-    Car wartburg311 = new Car("HATCHBACK", "WARTBURG", "311", 1.2, 5000);
-    Car skodaSuperb = new Car("SPORT", "SKODA", "SUPERB", 2.0, 9000);
-    Car skodaEnyaq = new Car("SUV", "SKODA", "ENYAQ", 2.0, 22000);
-    Car mazdaMX5 = new Car("SPORT", "MAZDA", "MX-5", 2.0, 24000);
-    Car toyotaSupra = new Car("SPORT", "TOYOTA", "SUPRA", 3.0, 55100);
-    Car volkswagenGolf = new Car("HATCHBACK", "VOLKSWAGEN", "GOLF", 1.9, 16000);
-    Car hondaAccord = new Car("COUPE", "HONDA", "ACCORD", 1.5, 27000);
-    Car hondaCivic = new Car("HATCHBACK", "HONDA", "CIVIC", 1.2, 17000);
-    Car toyotaGR86 = new Car("COUPE", "TOYOTA", "GR86", 1.1, 27700);
+   /* public static List<CarCatalog> initArr(){
+        if(list==null){
+            return new ArrayList<>();
+        }else{
+            return list;
+        }
+    }*/
 
+    public List<CarCatalog> initCarCatalog() {
 
-    List<Car> carArrayList = Arrays.asList(toyotaCamry, volvoXC90, mercedesGLC, wartburg311, skodaSuperb, skodaEnyaq,
-            mazdaMX5, toyotaSupra, volkswagenGolf, hondaAccord, hondaCivic, toyotaGR86);
+        CarCatalog toyotaCamry = new CarCatalog("SUV", "TOYOTA", "CAMRY", 3.0, 1200);
+        //list.add(toyotaCamry);
+        CarCatalog volvoXC90 = new CarCatalog("SUV", "VOLVO", "XC90", 2.0, 15000);
+        CarCatalog mercedesGLC = new CarCatalog("COUPE", "MERCEDES", "GLC60", 3.0, 17000);
+        CarCatalog wartburg311 = new CarCatalog("HATCHBACK", "WARTBURG", "311", 1.2, 5000);
+        CarCatalog skodaSuperb = new CarCatalog("SPORT", "SKODA", "SUPERB", 2.0, 9000);
+        CarCatalog skodaEnyaq = new CarCatalog("SUV", "SKODA", "ENYAQ", 2.0, 22000);
+        CarCatalog mazdaMX5 = new CarCatalog("SPORT", "MAZDA", "MX-5", 2.0, 24000);
+        CarCatalog toyotaSupra = new CarCatalog("SPORT", "TOYOTA", "SUPRA", 3.0, 55100);
+        CarCatalog volkswagenGolf = new CarCatalog("HATCHBACK", "VOLKSWAGEN", "GOLF", 1.9, 16000);
+        CarCatalog hondaAccord = new CarCatalog("COUPE", "HONDA", "ACCORD", 1.5, 27000);
+        CarCatalog hondaCivic = new CarCatalog("HATCHBACK", "HONDA", "CIVIC", 1.2, 17000);
+        CarCatalog toyotaGR86 = new CarCatalog("COUPE", "TOYOTA", "GR86", 1.1, 27700);
 
+        List<CarCatalog> carArrayList = Arrays.asList(toyotaCamry, volvoXC90, mercedesGLC, wartburg311, skodaSuperb, skodaEnyaq,
+                mazdaMX5, toyotaSupra, volkswagenGolf, hondaAccord, hondaCivic, toyotaGR86);
+        return carArrayList;
+    }
 
     public void printCarList() {
 
-        for (Car c : carArrayList)
-            System.out.println(c);
+      /*  for (Car c : list)
+            System.out.println(c);*/
     }
 }
