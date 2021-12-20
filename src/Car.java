@@ -1,17 +1,15 @@
-public class Car {
+public abstract class Car {
 
-    private static String category;
-    private String manufacturer;
-    private String model;
-    private double engine;
-    private int price;
-    public String color;
-    protected String year;
-    String wheels;
+    protected String category;
+    protected String manufacturer;
+    protected String model;
+    protected double engine;
+    protected int price;
 
-    public Car(){}
+    public Car() {
+    }
 
-    public Car (String category, String manufacturer, String model, double engine, int price){
+    public Car(String category, String manufacturer, String model, double engine, int price) {
         this.category = category;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -71,4 +69,5 @@ public class Car {
 
         //overloading
     }
+
 }
