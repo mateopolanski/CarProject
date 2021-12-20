@@ -46,6 +46,8 @@ public class CarSearchMethods extends CarCatalog {
             System.exit(1);
         } else resultByMan.forEach(System.out::println);
 
+        System.out.println("asdsa");
+
         return resultByMan;
     }
 
