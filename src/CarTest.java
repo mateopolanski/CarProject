@@ -21,7 +21,10 @@ public class CarTest extends CarCatalog{
         CarCatalog ss = new CarCatalog();
         List<CarCatalog> lista = ss.initCarCatalog();
 //      List<Strig> categoryList = List.of("SUV","MINIVAN");
-        List<CarCatalog> result = carSearch.searchByCategory(lista);
+        List<CarCatalog> result = carSearch.searchByCategory(error);
+
+        System.out.println("Bad error");
+
         List<CarCatalog> result2 = carSearch.searchByManufacturer(result);
         List<CarCatalog> result3 = carSearch.searchByModel(result2);
         List<CarCatalog> result4 = carSearch.searchByEngine(result3);
